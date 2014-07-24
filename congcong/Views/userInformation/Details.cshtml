@@ -1,0 +1,71 @@
+﻿@model congcong.Models.cc_user
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>cc_user</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.frendsNum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.frendsNum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.secretMessageNum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.secretMessageNum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.publickMessageNum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.publickMessageNum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.securityQuestion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.securityQuestion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.securityAnswer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.securityAnswer)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<congcong.Models.cc_user>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.frendsNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.secretMessageNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publickMessageNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.securityQuestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.securityAnswer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.frendsNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.secretMessageNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publickMessageNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.securityQuestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.securityAnswer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
